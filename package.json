@@ -19,6 +19,7 @@
         "vue": "^3.3.13"
     },
     "dependencies": {
-        "postgres": "^3.4.3"
+        "postgres": "^3.4.3",
+        "ziggy-js": "github:tightenco/ziggy"
     }
 }
