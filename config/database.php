@@ -82,7 +82,7 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'ep-small-union-a5l06po8-pooler.us-east-2.aws.neon.tech'),
+            'host' => env('DB_HOST', 'ep-small-union-a5l06po8.us-east-2.aws.neon.tech'),
             'port' => env('DB_PORT', '5432'),
             'database' => env('DB_DATABASE', 'latinpowermusicdb'),
             'username' => env('DB_USERNAME', 'latinpowermusicdb_owner'),
@@ -91,8 +91,13 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => 'prefer',
+            'sslmode' => 'require',
+            'options' => [
+                'sslmode' => env('DB_SSLMODE', 'require'),
+                'options' => env('DB_OPTIONS', 'ep-small-union-a5l06po8'),
+            ],
         ],
+
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
